@@ -10,7 +10,7 @@ public class Main {
 		// Missisipi splitted by 's'
 		// Mi , i , ippi
 		
-		String missisipi = "Mississippi";
+		String missisipi = "MississippiMississippiMississippi";
 		// Using Regular expressions
 		
 		Pattern p = Pattern.compile("Mi(.*?)pi");

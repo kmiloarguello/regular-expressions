@@ -5,11 +5,13 @@ import java.util.Arrays;
 public class Main {
 
 	public static void main(String[] args) {
-		//Separating by strings
-		String myS = "Camilo x Juliana";
-		String[] splitString = myS.split(" x ");
+		// Missisipi splitted by 's'
+		// Mi , i , ippi
 		
-		System.out.println(Arrays.toString(splitString));
+		String missisipi = "Mississippi";
+		String[] spMissisipi = missisipi.split("ss");
+		
+		System.out.println(Arrays.toString(spMissisipi));
 		
 	}
 

@@ -9,9 +9,12 @@ public class Main {
 		// Mi , i , ippi
 		
 		String missisipi = "Mississippi";
-		String[] spMissisipi = missisipi.split("ss");
+		// Return part of string
+		String missiPart = missisipi.substring(1,5);
 		
-		System.out.println(Arrays.toString(spMissisipi));
+		//String[] spMissisipi = missisipi.split("ss");
+		
+		System.out.println(missiPart);
 		
 	}
 

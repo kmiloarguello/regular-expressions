@@ -7,14 +7,23 @@ import java.util.regex.Pattern;
 public class Main {
 
 	public static void main(String[] args) {
-		// Missisipi splitted by 's'
-		// Mi , i , ippi
+		// Goal: Get URL and ALT
 		
-		String missisipi = "MississippiMississippiMississippi";
-		// Using Regular expressions
+		String data = "<img src=\"https://djmag.com/sites/default/files/styles/djmag_landscape/public/top100/djs/image/DVLM.png?itok=W2rCuV_y\" alt=\"Dimitri Vegas &amp; Like Mike\" title=\"Dimitri Vegas &amp; Like Mike\" />";
+		// Using Regular expressions for URL
 		
-		Pattern p = Pattern.compile("Mi(.*?)pi");
-		Matcher m = p.matcher(missisipi);
+		Pattern p = Pattern.compile("src=\"(.*?)\"");
+		
+		Matcher m = p.matcher(data);
+		
+		
+		while(m.find()) {
+			System.out.println(m.group(1));
+		}
+		// For ALT
+		p = Pattern.compile("alt=\"(.*?)\"");
+		
+		m = p.matcher(data);
 		
 		
 		while(m.find()) {
@@ -63,6 +72,8 @@ public class Main {
 		</article>
 	</div>
 </div>
+
+
 
 *
 */

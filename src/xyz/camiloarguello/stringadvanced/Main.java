@@ -1,6 +1,8 @@
 package xyz.camiloarguello.stringadvanced;
 
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
@@ -9,12 +11,16 @@ public class Main {
 		// Mi , i , ippi
 		
 		String missisipi = "Mississippi";
-		// Return part of string
-		String missiPart = missisipi.substring(1,5);
+		// Using Regular expressions
 		
-		//String[] spMissisipi = missisipi.split("ss");
+		Pattern p = Pattern.compile("Mi(.*?)pi");
+		Matcher m = p.matcher(missisipi);
 		
-		System.out.println(missiPart);
+		
+		while(m.find()) {
+			System.out.println(m.group(1));
+		}
+			
 		
 	}
 
